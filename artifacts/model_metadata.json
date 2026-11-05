@@ -1,0 +1,8 @@
+{
+  "content_model": "blend",
+  "collaborative_model": "('SVD', {'rank': 5})",
+  "movies_count": 141,
+  "users_count": 597,
+  "ratings_count": 13179,
+  "tmdb_metadata_file": "data\\top200_tmdb.csv"
+}

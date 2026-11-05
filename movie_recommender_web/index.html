@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMatch — подбор фильмов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">▶</span> CineMatch</a>
+    <span class="top-note">Твой следующий любимый фильм</span>
+    <span class="api-status" id="apiStatus"><i></i> Проверяем API…</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ПЕРСОНАЛЬНЫЙ КИНОГИД</p>
+        <h1>Что посмотрим<br><em>сегодня?</em></h1>
+        <p class="hero-text">Находи фильмы по жанрам, открывай похожие истории и выбирай из популярных картин.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="reel">✦</div><div class="ticket">CINEMA<br><b>TONIGHT</b></div></div>
+    </section>
+
+    <section class="controls">
+      <div class="section-heading">
+        <div><p class="eyebrow">ПОДБОР</p><h2>Найти фильм</h2></div>
+        <button class="text-button" id="popularButton">Показать популярные →</button>
+      </div>
+      <div class="search-grid">
+        <form id="titleForm" class="search-card">
+          <label for="titleInput">Похожие фильмы</label>
+          <p>Введи название фильма, который тебе понравился</p>
+          <div class="input-row"><input id="titleInput" placeholder="Например, The Dark Knight" required><button>Найти</button></div>
+        </form>
+        <form id="genreForm" class="search-card">
+          <label for="genreSelect">Фильмы по жанру</label>
+          <p>Выбери настроение на сегодня</p>
+          <div class="input-row"><select id="genreSelect" required><option value="">Загрузка жанров…</option></select><button>Подобрать</button></div>
+        </form>
+        <form id="userForm" class="search-card">
+          <label for="userInput">Рекомендации для пользователя</label>
+          <p>Персональная подборка по ID пользователя</p>
+          <div class="input-row"><input id="userInput" type="number" min="1" placeholder="Например, 1" required><button>Подобрать</button></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-heading"><div><p class="eyebrow">ТВОЯ ПОДБОРКА</p><h2 id="resultsTitle">Популярные фильмы</h2></div><span id="resultCount" class="count"></span></div>
+      <div id="message" class="message">Загружаем фильмы…</div>
+      <div id="movieGrid" class="movie-grid"></div>
+    </section>
+    <footer> C I N E M A T C H <span>Учебный проект рекомендательной системы</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

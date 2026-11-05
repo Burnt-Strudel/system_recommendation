@@ -1,0 +1,7 @@
+{
+  "content_model": "overview",
+  "cf_model": "SVD",
+  "cf_params": {
+    "rank": 5
+  }
+}
